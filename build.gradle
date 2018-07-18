@@ -10,7 +10,15 @@ buildscript {
     }
 }
 
-
+configurations.all {
+    resolutionStrategy {
+        eachDependency {
+            if (it.requested.group == 'org.springframework') {
+                it.useVersion '4.2.0.RC3'
+            }
+        }
+    }
+}
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
