@@ -79,5 +79,5 @@ public class AppRestController {
 	        return "0";
         }
     }
-    @RequestMapping
+    
 }
