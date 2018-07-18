@@ -57,27 +57,26 @@ public class AppRestController {
 	}
 
 	@RequestMapping("/changePassword")
-    public String changePass(HttpServletRequest request){
+   	public String changePass(HttpServletRequest request){
 	    String id = request.getParameter("id");
 	    String cur_pw = request.getParameter("cur_pw");
 	    String new_pw = request.getParameter("new_pw");
 	    return userService.changePw(id, cur_pw, new_pw);
-    }
+    	}
 
-    @RequestMapping("/goodBye")
-    public String cancelid(HttpServletRequest request){
+    	@RequestMapping("/goodBye")
+    	public String cancelid(HttpServletRequest request){
 	    String id = request.getParameter("id");
 	    String  pw = request.getParameter("pw");
 	    String del = request.getParameter("request");
 	    if (!id.equals("null") && del.equals("null")){
-	        return userService.IogIn(id, pw);
-        }
-        else if (!del.equals("null")){
-            return userService.cancelId(id, pw);
-        }
-        else {
+	   	     return userService.IogIn(id, pw);
+        	}
+       	    else if (!del.equals("null")){
+           	 return userService.cancelId(id, pw);
+       	 	}
+            else {
 	        return "0";
-        }
-    }
-    
+       	    }
+    	}   
 }
