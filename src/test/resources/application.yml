@@ -10,6 +10,7 @@ spring:
     show-sql: true
     
 ---
+spring.version=4.2.0.REALEASE
 # mariaDB
 spring.datasource.driverClassName=org.mariadb.jdbc.Driver
 spring.datasource.url=jdbc:mariadb://localhost:3306/infodb
